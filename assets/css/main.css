@@ -32,7 +32,20 @@ nav {
 
 .hero {
     display: flex;
+    justify-content: space-evenly;
     background-color: cornflowerblue;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.hero-image {
+    width: 40%;
+    margin-left: 2rem;
+}
+
+.hero-text {
+    width: 60%;
 }
 
 section {
@@ -57,6 +70,17 @@ nav ul li {
 
 nav ul li:hover{
     background-color: aqua;
+}
+
+/*
+Hero
+*/
+
+.hero img {
+    max-width: 20rem;
+    max-height: 20rem;
+    border-radius: 50%;
+    box-shadow: 0 3px 50px hsl(0, 0%, 20%);
 }
 
 /*

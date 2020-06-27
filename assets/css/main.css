@@ -1,0 +1,77 @@
+.debug {
+    height: 100px;
+    width: 100px;
+    background-color: bisque;
+}
+
+
+/*
+Layout
+*/
+
+body {
+    display: flex;
+    min-height: 100vh; /* to push footer down, from Solved by Flexbox */
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* ensure the main content section stretches full width and footer stays at the bottom */
+    margin: 0 auto;
+    width: 80%;
+    background-color: chartreuse;
+}
+
+nav {
+    display: flex;
+    background-color: aliceblue;
+    justify-content: end;
+}
+
+.hero {
+    display: flex;
+    background-color: cornflowerblue;
+}
+
+section {
+    display: flex;
+}
+
+/*
+Navigation
+*/
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    background-color: antiquewhite;
+    display: block;
+}
+
+nav ul li:hover{
+    background-color: aqua;
+}
+
+/*
+Footer
+*/
+
+footer {
+    background-color: cadetblue;
+}
+
+/*
+Typography
+*/
+
+.section-title {
+    display: inline-block;
+    font-weight: 600;
+}

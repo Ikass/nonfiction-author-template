@@ -28,7 +28,7 @@ main {
 
 nav {
     display: flex;
-    background-color: aliceblue;
+    background-color: hsl(231, 52%, 88%);
     justify-content: space-between;
     align-items: baseline;
 }
@@ -89,7 +89,7 @@ Hero
 .hero {
     display: flex;
     justify-content: space-evenly;
-    background-color: cornflowerblue;
+    background-color: hsl(230, 50%, 80%);
     padding: 20px;
     width: 100%;
     height: auto;

@@ -27,7 +27,13 @@ main {
 nav {
     display: flex;
     background-color: aliceblue;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo {
+    justify-content: start;
+    margin-left: 40px;
 }
 
 .hero {
@@ -50,6 +56,14 @@ nav {
 
 section {
     display: flex;
+    justify-content: space-evenly;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rebeccapurple;
+    text-align: center;
 }
 
 /*
@@ -60,6 +74,7 @@ nav ul {
     display: flex;
     list-style-type: none;
     margin-right: 20px;
+    justify-content: end;
 }
 
 nav ul li {

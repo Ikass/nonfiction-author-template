@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="overflow-hidden">
+    <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <!-- header grid -->
+      <!-- <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
+        <div>
+          <h2 class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">{{ .Title }}</h2>
+        </div>
+      </div> -->
+      <!-- text and image grid -->
+      <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+        <div class="relative lg:row-start-1 lg:col-start-2">
+          <div class="relative mx-auto text-base max-w-prose lg:max-w-none">
+            <figure>
+              <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+                <img class="object-cover object-center rounded-lg shadow-lg" src="{{ .Params.image }}" alt="Book cover image" width="600" height="800">
+              </div>
+            </figure>
+            <div class="mt-10">
+              <button type="submit" class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 lg:mt-0">
+          <div>
+            <h2 class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">{{ .Title }}</h2>
+          </div>
+          <div class="mx-auto mt-5 prose text-gray-500 prose-indigo lg:max-w-none lg:row-start-1 lg:col-start-1">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

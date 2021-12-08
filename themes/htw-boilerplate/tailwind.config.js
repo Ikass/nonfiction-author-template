@@ -32,5 +32,5 @@ module.exports = {
 		mode: 'all',
 		
 	},
-	plugins: [ typography, aspect, forms, ]
+	plugins: [ typography, aspect, forms ]
 };

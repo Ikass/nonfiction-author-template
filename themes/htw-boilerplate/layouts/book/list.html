@@ -8,22 +8,23 @@
       <div class="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
 
         {{ range .Pages }}
-        <div>
-          <a href="{{ .Permalink }}" class="flex flex-col group">
+        <div class="flex flex-col group">
+          <a href="{{ .Permalink }}" class="">
             <!-- book cover image -->
             <div aria-hidden="true" class="overflow-hidden rounded-lg aspect-w-3 aspect-h-2 group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6">
               <img src="{{ .Params.image }}" alt="Brown leather key ring with brass metal loops and rivets on wood table." class="object-cover object-center w-full h-full">
             </div>
             <!-- description -->
-            <div class="flex-1">
-              <h3 class="mt-4 text-base font-semibold text-gray-900">{{ .Title | markdownify}}</h3>
-              <p class="mt-2 text-sm text-gray-500">{{ .Description | markdownify }}</p>
+            <div class="flex flex-col justify-between flex-1">
+              <div class="">
+                <h3 class="mt-4 text-base font-semibold text-gray-900">{{ .Title | markdownify}}</h3>
+                <p class="mt-2 text-sm text-gray-500">{{ .Description | markdownify }}</p>
+              </div>
               <!-- read more -->
+              <div class="mt-3">
+                <a href="{{ .Permalink }}" class="font-semibold text-indigo-600 hover:text-indigo-500">Read more</a>
+              </div>
             </div>
-            <div class="self-end mt-3">
-              <a href="{{ .Permalink }}" class="font-semibold text-indigo-600 hover:text-indigo-500">Read more</a>
-            </div>
-            
           </a>
         </div>
         {{ end }}

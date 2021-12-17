@@ -32,5 +32,8 @@ module.exports = {
 		mode: 'all',
 		
 	},
-	plugins: [ typography, aspect, forms ]
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
+    ]
 };

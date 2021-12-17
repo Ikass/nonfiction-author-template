@@ -1,5 +1,5 @@
 ---
-title: TailwindCSS Basic Hugo Starter
+title: Non-Fiction Author website template
 ---
 
 ## Overview
@@ -25,8 +25,6 @@ func New(numWorkers int) *Workers {
 }
 ```
 
-
-
 ## Block Elements
 
 ### Paragraphs and Line Breaks
@@ -42,17 +40,16 @@ significantly from most other text-to-HTML formatters (including Movable
 Type's "Convert Line Breaks" option) which translate every line break
 character in a paragraph into a `<br />` tag.
 
-When you *do* want to insert a `<br />` break tag using Markdown, you
+When you _do_ want to insert a `<br />` break tag using Markdown, you
 end a line with two or more spaces, then type return.
 
 ### Headers
 
 Markdown supports two styles of headers, [Setext] [1] and [atx] [2].
 
-
 ```go
 // Require loads a module the Node.js way.
-// Note that this requires that the require function is present; 
+// Note that this requires that the require function is present;
 // if in the browser, and not in Node.js, try Browserify.
 func Require(path ...string) *ReactComponent {
 	m, err := support.Require(path...)
@@ -69,7 +66,6 @@ closing hashes don't even need to match the number of hashes
 used to open the header. (The number of opening hashes
 determines the header level.)
 
-
 ### Blockquotes
 
 Markdown uses email-style `>` characters for blockquoting. If you're
@@ -80,7 +76,7 @@ wrap the text and put a `>` before every line:
 > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
 > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-> 
+>
 > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
 > id sem consectetuer libero luctus adipiscing.
 
@@ -88,11 +84,11 @@ Markdown allows you to be lazy and only put the `>` before the first
 line of a hard-wrapped paragraph:
 
 > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 
 > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.
+> id sem consectetuer libero luctus adipiscing.
 
 Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by
 adding additional levels of `>`:
@@ -107,12 +103,12 @@ Blockquotes can contain other Markdown elements, including headers, lists,
 and code blocks:
 
 > ## This is a header.
-> 
-> 1.   This is the first list item.
-> 2.   This is the second list item.
-> 
+>
+> 1.  This is the first list item.
+> 2.  This is the second list item.
+>
 > Here's some example code:
-> 
+>
 >     return shell_exec("echo $input | $markdown_script");
 
 Any decent text editor should make email-style quoting easy. For

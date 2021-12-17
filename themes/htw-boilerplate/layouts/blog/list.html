@@ -1,109 +1,62 @@
 {{ define "main" }}
 <div class="px-4 py-12 my-4 bg-white sm:px-6 lg:py-16 lg:px-8">
-
-    <div class="container mx-auto max-w-7xl">
-        
-        <!-- header 1-->
-        <!-- <div class="text-center">
-            <h2 class="text-4xl font-bold text-gray-900 sm:text-4xl">{{ .Title }}</h2>
-            <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">List template for posts.</p>
-        </div> -->
-
-        <!-- header 2 -->
-        <div class="text-center">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              From the blog
-            </h2>
-            <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
-            </p>
-        </div>
-          
-        <!-- grid 1 -->
-        <!-- <div class="grid gap-8 pt-10 mt-6 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12"> -->
-
-        <!-- grid 2 -->
-        <div class="grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none">
-        
-
-            <!-- {{ range .Pages }}
-            <div class="p-4 border-l-4 border-transparent rounded-md hover:border-indigo-600 hover:bg-indigo-50">
-                <p class="text-sm text-gray-500">
-                    <time datetime="2020-03-16">{{ .Date.Format "Jan 2, 2006" }}</time>
-                </p>
-                <a href="{{ .Permalink }}" class="block mt-2">
-                    <p class="text-2xl font-semibold text-gray-900">{{ .Title | markdownify }}</p>
-                    <p class="mt-3 text-xl text-gray-500">{{ .Description | markdownify }}</p>
-                </a>
-                <div class="mt-3">
-                    <a href="{{ .Permalink }}" class="font-semibold text-indigo-600 hover:text-indigo-500">Read full story</a>
-                </div>
-            </div>
-            {{ end }} -->
-
-
-            <!-- loop 2 -->
-            {{ range .Pages }}
-            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-                <div class="flex-shrink-0">
-                  <!-- <img class="object-cover w-full h-48" src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt=""> -->
-                  <img class="object-cover w-full h-48" src="{{ .Params.image }}" alt="">
-                </div>
-                <div class="flex flex-col justify-between flex-1 p-6 bg-white">
-                  <div class="flex-1">
-                    <p class="text-sm font-medium text-indigo-600">
-                        Article
-                    </p>
-                    <div class="flex space-x-1 text-sm text-gray-500">
-                        <time datetime="2020-03-16">
-                            {{ .Date.Format "Jan 2, 2006" }}
-                        </time>
-                        <span aria-hidden="true">
-                          &middot;
-                        </span>
-                        <span>
-                            {{ .ReadingTime }} min read
-                        </span>
-                      </div>
-                    <a href="{{ .Permalink }}" class="block mt-2">
-                      <p class="text-xl font-semibold text-gray-900">
-                        {{ .Title | markdownify }}
-                      </p>
-                      <p class="mt-3 text-base text-gray-500">
-                        {{ .Description | markdownify }}
-                      </p>
-                    </a>
-                    <div class="mt-3">
-                        <a href="{{ .Permalink }}" class="font-semibold text-indigo-600 hover:text-indigo-500">Read full story</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {{ end }}
-
-        </div>
-        
-
-
-<!-- This example requires Tailwind CSS v2.0+ -->
-<!-- <div class="px-4 pt-16 pb-20 bg-gray-50 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-
-    <div class="mx-auto max-w-7xl">
-
-      <div class="grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none"> -->
-
-
-  
-
-
-
-
-      <!-- </div>
+  <div class="container mx-auto max-w-7xl">
+    <!-- header -->
+    <div class="text-center">
+      <h2
+        class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+      >
+        From the blog
+      </h2>
+      <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero
+        labore natus atque, ducimus sed.
+      </p>
     </div>
-  </div> -->
 
-
-    </div> 
+    <!-- blog post grid -->
+    <div class="grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none">
+      <!-- loop through blog posts -->
+      {{ range .Pages }}
+      <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+        <div class="flex-shrink-0">
+          <!-- <img class="object-cover w-full h-48" src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt=""> -->
+          <img
+            class="object-cover w-full h-48"
+            src="{{ .Params.image }}"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+          <div class="flex-1">
+            <p class="text-sm font-medium text-indigo-600">Article</p>
+            <div class="flex space-x-1 text-sm text-gray-500">
+              <time datetime="2020-03-16">
+                {{ .Date.Format "Jan 2, 2006" }}
+              </time>
+              <span aria-hidden="true"> &middot; </span>
+              <span> {{ .ReadingTime }} min read </span>
+            </div>
+            <a href="{{ .Permalink }}" class="block mt-2">
+              <p class="text-xl font-semibold text-gray-900">
+                {{ .Title | markdownify }}
+              </p>
+              <p class="mt-3 text-base text-gray-500">
+                {{ .Description | markdownify }}
+              </p>
+            </a>
+            <div class="mt-3">
+              <a
+                href="{{ .Permalink }}"
+                class="font-semibold text-indigo-600 hover:text-indigo-500"
+                >Read full story</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
 </div>
 {{ end }}
-

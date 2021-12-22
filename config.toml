@@ -29,8 +29,8 @@ theme = 'htw-boilerplate'
   name = 'About'
   url = '/about/'
   weight = 800
-# [[menu.main]]
-#   identifier = 'contact'
-#   name = 'Contact'
-#   url = '/contact/'
-#   weight = 900
+[[menu.main]]
+  identifier = 'contact'
+  name = 'Contact'
+  url = '/contact/'
+  weight = 900

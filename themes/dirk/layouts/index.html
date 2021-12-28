@@ -1,6 +1,21 @@
 {{ define "main" }}
-<article class="text-center text-gray-700">
-    <h1 class="font-serif font-extralight text-5xl text-gray-500">{{ .Title }}</h1>
-    {{ .Content }}
+
+<!-- Hero section -->
+<article
+  id="hero"
+  class="px-4 mx-auto my-8 max-w-7xl sm:mt-24 sm:px-6 lg:mt-32"
+>
+  {{- partial "hero.html" . -}}
 </article>
+
+<section id="logos">{{- partial "logos.html" . -}}</section>
+
+<section id="services">{{- partial "services.html" . -}}</section>
+
+<section id="about">{{- partial "about.html" . -}}</section>
+
+<section id="testimonials">{{- partial "testimonials.html" . -}}</section>
+
+<section id="books">{{- partial "books.html" . -}}</section>
+
 {{ end }}

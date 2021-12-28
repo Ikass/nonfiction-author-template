@@ -1,8 +1,8 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Non-Fiction Author'
-# theme = 'dirk'
-theme = 'htw-boilerplate'
+theme = 'dirk'
+# theme = 'htw-boilerplate'
 
 [build]
 # Used by PurgeCSS

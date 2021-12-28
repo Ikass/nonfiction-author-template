@@ -22,7 +22,7 @@ theme = 'dirk'
 [[menu.main]]
   identifier = 'books'
   name = 'Books'
-  url = '/book/'
+  url = '/books/'
   weight = 300
 [[menu.main]]
   identifier = 'about'

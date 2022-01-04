@@ -1,47 +1,65 @@
 {{ define "main" }}
+
 <div class="max-w-xl px-4 py-16 mx-auto sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-  <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">
+
+  <!-- <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
     Book series
   </h2>
-  <p class="mt-4 text-base text-gray-500">
+  <p class="mt-4 text-lg text-gray-500">
     Here are the awesome book series I have written for your enjoyment and
     benefit.
-  </p>
+  </p> -->
 
-  <div class="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+  <div class="text-center">
+    <h2
+      class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+    >
+      Book series
+    </h2>
+    <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
+      Here are the awesome book series I have written for your enjoyment and
+      benefit.
+    </p>
+  </div>
+
+
+  <!-- 3 column grid with books -->
+  <div class="grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none">
     {{ range .Pages }}
-    <div>
-      <a href="{{ .Permalink }}" class="flex flex-col justify-between group">
-        <!-- book cover image -->
-        <div
-          aria-hidden="true"
-          class="overflow-hidden rounded-lg aspect-w-3 aspect-h-2 group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
-        >
-          <img
-            src="{{ .Params.image }}"
-            alt="Brown leather key ring with brass metal loops and rivets on wood table."
-            class="object-cover object-center w-full h-full"
-          />
-        </div>
-        <!-- description -->
+    <div
+      class="flex flex-col overflow-hidden rounded-lg shadow-lg hover:shadow-xl group"
+    ><!-- book cover image -->
+      <div class="flex-shrink-0">
+        <img
+          class="object-cover group-hover:opacity-75"
+          src="{{ .Params.image }}"
+          alt=""
+        />
+      </div>
+      <!-- description -->
+      <div class="flex flex-col justify-between flex-1 p-6">
         <div class="flex-1">
-          <h3 class="mt-4 text-base font-semibold text-gray-900">
-            {{ .Title | markdownify}}
-          </h3>
-          <p class="mt-2 text-sm text-gray-500">
-            {{ .Description | markdownify }}
-          </p>
-          <!-- read more -->
+          <p class="text-sm font-medium text-indigo-600">Productivity</p>
+          <a href="{{ .Permalink }}" class="block mt-2">
+            <p class="text-xl font-semibold text-gray-900">{{ .Title | markdownify}}</p>
+            <p class="mt-3 text-base text-gray-500">
+              {{ .Description | markdownify }}
+            </p>
+          </a>
         </div>
-        <div class="self-end mt-3 font-semibold text-indigo-600 hover:text-indigo-500">
-            <p>
-              Read more
-            </p> 
+        <div class="mt-3">
+          <a
+            href="{{ .Permalink }}"
+            class="text-base font-semibold text-indigo-600 hover:text-indigo-500"
+          >
+            Read more
+          </a>
         </div>
-      </a>
+      </div>
     </div>
     {{ end }}
   </div>
+
 </div>
 
 {{ end }}
